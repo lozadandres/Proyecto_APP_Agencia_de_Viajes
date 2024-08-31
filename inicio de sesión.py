@@ -2,6 +2,7 @@
 ## Diccionario vacío, para que guarde temporalmente usuarios.
 
 usuarios_registrados = {}
+usuarioregistrado = 000
 
 def iniciar_sesion():
     usuario = input("Ingrese su nombre de usuario: ")
@@ -16,6 +17,7 @@ def iniciar_sesion():
         registrar_usuario()
 
 def registrar_usuario():
+    global usuarioregistrado
     usuario = input("Ingrese un nombre de usuario nuevo: ")
     if usuario in usuarios_registrados:
         print("Este nombre de usuario ya está registrado.")
